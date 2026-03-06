@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wave Browser</title>
+    <link id="pageFavicon" rel="icon" type="image/svg+xml" href="assets/wave-favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="browser">
+      <header class="tab-row">
+        <div id="tabs" class="tabs" aria-label="Browser tabs"></div>
+        <button id="newTab" class="icon-btn" type="button" aria-label="Open new tab">+</button>
+      </header>
+
+      <section class="toolbar">
+        <div class="nav-actions">
+          <button id="back" class="icon-btn" type="button" aria-label="Back">◀</button>
+          <button id="forward" class="icon-btn" type="button" aria-label="Forward">▶</button>
+          <button id="reload" class="icon-btn" type="button" aria-label="Reload">↻</button>
+        </div>
+
+        <form id="addressForm" class="address-form" autocomplete="off">
+          <label for="address" class="visually-hidden">Search or URL</label>
+          <input id="address" name="address" type="search" placeholder="Search or type web address" />
+          <ul id="suggestions" class="suggestions" aria-label="Suggestions"></ul>
+        </form>
+
+        <div class="brand-corner" aria-label="Wave Browser brand">
+          <span>Wave Browser</span>
+          <img src="assets/wave-logo.svg" alt="Wave logo" />
+        </div>
+      </section>
+
+      <main class="viewport">
+        <section id="newTabPage" class="new-tab-page">
+          <h1>Wave Browser</h1>
+          <div class="new-tab-search-wrap">
+            <input id="newTabSearch" type="search" placeholder="Search the web" aria-label="Search the web" />
+          </div>
+        </section>
+
+        <iframe id="webview" title="Wave Browser webview" referrerpolicy="no-referrer"></iframe>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
